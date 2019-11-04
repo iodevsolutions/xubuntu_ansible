@@ -3,7 +3,7 @@
   tasks:
   - name: Install packages
     apt: name={{item}}
-    with__items:
+    with_items:
       - htop
       - vim
       - zsh
