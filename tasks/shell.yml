@@ -1,2 +1,2 @@
 - name: Execute the Oh My Zsh shell script for installation
-  shell: -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  shell: $(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)
