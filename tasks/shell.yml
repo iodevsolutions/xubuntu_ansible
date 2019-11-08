@@ -1,8 +1,11 @@
 - name: Download Oh My Zsh installer
+  become: false
   get_url: url=https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh dest=/tmp/zsh-installer.sh
 
 - name: Execute the zsh-installer.sh
+  become: false
   shell: /tmp/zsh-installer.sh
 
 - name: Remove the zsh-installer.sh
+  become: false
   file: path=/tmp/zsh-installer.sh state=absent
