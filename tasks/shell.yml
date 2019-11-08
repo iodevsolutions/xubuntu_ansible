@@ -4,7 +4,7 @@
 
 - name: Execute the zsh-installer.sh
   become_user: orndorff
-  shell: /home/orndorff/Downloads/zsh-installer.sh
+  script: /home/orndorff/Downloads/zsh-installer.sh
 
 - name: Remove the zsh-installer.sh
   become_user: orndorff
