@@ -1,11 +1,11 @@
 - name: Download Oh My Zsh installer
-  become: false
+  become_user: orndorff
   get_url: url=https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh dest=/tmp/zsh-installer.sh
 
 - name: Execute the zsh-installer.sh
-  become: false
+  become_user: orndorff
   shell: /tmp/zsh-installer.sh
 
 - name: Remove the zsh-installer.sh
-  become: false
+  become_user: orndorff
   file: path=/tmp/zsh-installer.sh state=absent
