@@ -18,6 +18,5 @@
   when: not p.stat.exists
 
 - name: Change the default shell to ZSH
-  become_user: orndorff
-  shell: chsh -s $(which zsh)
+  shell: chsh -s $(which zsh) orndorff
   when: not p.stat.exists
