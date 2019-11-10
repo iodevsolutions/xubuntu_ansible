@@ -3,4 +3,8 @@
 
 - name: Set XFCE Wallpaper
   become_user: orndorff
-  shell: xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitorVirtual-0/workspace0/last-image --set /usr/share/xfce4/backdrops/15512_eve_online.jpg
+  xconf: 
+    channel: "xfce4-desktop"
+    property: "/backdrop/screen0/monitorVirtual-0/workspace0/last-image"
+    value_type: "string"
+    value: "/usr/share/xfce4/backdrops/15512_eve_online.jpg"
