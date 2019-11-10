@@ -1,0 +1,6 @@
+- name: Copy wallpaper
+  copy: src=files/15512_eve_online.jpg dest=/usr/share/xfce4/backdrops/15512_eve_online.jpg owner=orndorff group=orndorff mode=600
+
+- name: Set XFCE Wallpaper
+  become_user: orndorff
+  shell: xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitorVirtual-0/workspace0/last-image --set /usr/share/xfce4/backdrops/15512_eve_online.jpg
